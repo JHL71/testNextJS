@@ -1,4 +1,8 @@
-'use client';
+// 'use client';
+
+export const metadata = {
+  title: 'Home | Next Movies'
+}
 
 export default function Page() {
   return (

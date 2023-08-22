@@ -1,5 +1,6 @@
 import './globals.css';
 import NavBar from "./NavBar";
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Next.js',
@@ -12,12 +13,6 @@ export default function RootLayout({ children }) {
       <body>
         <NavBar />
         {children}
-        <span>hello</span>
-        <style>{`
-          a {
-            color: white;
-          }
-        `}</style>
       </body>
     </html>
   )
