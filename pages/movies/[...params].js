@@ -4,7 +4,6 @@ import Seo from "@/components/seo";
 export default function Detail({params, res}) {
   const router = useRouter();
   const [title, id] = params || [];
-  console.log(res);
   return (
     <div>
       <Seo title={title}/>
