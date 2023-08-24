@@ -49,19 +49,30 @@ export default function Detail({params, res}) {
   )
 }
 
-export async function getStaticProps({params: {params}}) {
+// export async function getStaticProps({params: {params}}) {
+//   const res = await (await fetch(`http://localhost:3000/api/movies/${params[1]}`)).json();
+//   return {
+//     props: {
+//       params,
+//       res
+//     }
+//   }
+// }
+
+// export function getStaticPaths() {
+//   return {
+//     paths: [],
+//     fallback: 'blocking'
+//   }
+// }
+
+
+export async function getServerSideProps({params: {params}}) {
   const res = await (await fetch(`http://localhost:3000/api/movies/${params[1]}`)).json();
   return {
     props: {
       params,
       res
     }
-  }
-}
-
-export function getStaticPaths() {
-  return {
-    paths: [],
-    fallback: 'blocking'
   }
 }
